@@ -3,11 +3,19 @@
 skinparam monochrome true
 skinparam shadowing false
 
-User      as u
-Manager   as m
-(School)  as s
+User             as u
+Manager          as m
+(School)         as (s)
+(Hyper Manager)  as (t)
 
-u -> s  : student
-m --> s : great lord
+u ->  (s)  : student
+m --> (s)  : great lord
+(t) <|-- m : extension
+
+note right of (t) : Manages everything related to something inappropriate but need more effort grasp what actually is necessary to goto the next step. Please note this reality.
+
+note "we actually are\nin good relationship with\neach other!" as xxx
+u   .. xxx
+xxx .. m
 
 @enduml
